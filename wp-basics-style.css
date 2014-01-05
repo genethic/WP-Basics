@@ -1,0 +1,174 @@
+/*Breadcrumbs*/
+.breadcrumbs {
+float:left;
+width:100%;
+margin-bottom:30px;
+}
+
+.breadcrumbs a{
+color:#1abc9c;
+font-size:16px:
+}
+
+.breadcrumbs a:hover{
+text-decoration:underline;
+}
+
+/*Pagination*/
+.post-links {
+float:left;
+width:100%;
+margin-top:20px;
+padding:20px 0;
+border-bottom:1px solid #eee;
+border-top:1px solid #eee;
+box-sizing:border-box;
+}
+
+.post-links a{
+color:#1abc9c;
+font-size: 18px;
+font-weight: 600;
+}
+
+.post-links a:hover{
+text-decoration:underline;
+}
+
+.post-links .previous{
+float:left;
+width:50%;
+}
+
+.post-links .next{
+float:right;
+width:50%;
+text-align:right;
+}
+
+/*related content*/
+.related-post-wrapper {
+float:left;
+margin:3% 0;
+width:100%;
+box-sizing:border-box;
+}
+.related-post-wrapper > h3 {
+border-bottom:1px solid #111;
+float:left;
+margin-bottom:1%;
+width:100%;
+}
+.related-post {
+float:left;
+margin-left:4%;
+width:22%;
+position:relative;
+}
+.related-post:nth-of-type(4n+1) {
+clear:left;
+margin-left:0;
+}
+.related-post h3 {
+width:100%;
+float:left;
+margin-top:5px;
+}
+.related-post h3 a {
+color:#222;
+font-size:14px;
+line-height:20px;
+overflow:hidden;
+float:left;
+width:100%;
+margin-top:5px;
+}
+.related-post h3 a:hover {
+
+}
+
+.related-post-thumbnail {
+float:left;
+position:relative;
+width:100%;
+}
+
+.related-post-thumbnail img {
+width:100% !important;
+}
+
+/*author*/
+.author-info {
+margin:3% 0;
+float:left;
+width:100%;
+}
+.author-info h2 {
+line-height:18px;
+margin:0 0 2% 0;
+}
+.author-info-avatar {
+float:left;
+width:20%;
+}
+.author-info-avatar img {
+height:80%;
+width:100% !important;
+}
+.author-info-desc {
+float:right;
+padding-left:3%;
+width:80%;
+box-sizing:border-box;
+}
+.author-info-links {
+float:right;
+margin-top:10px;
+width:auto;
+}
+
+.author-info-links a{
+font-size:14px;
+}
+
+.author-info-links:hover {
+text-decoration:underline;
+}
+.author-info .social-profile-buttons {
+float:left;
+margin-right:0;
+margin-top:10px;
+margin-bottom: 0;
+width:auto;
+}
+.author-info .social-profile-buttons a {
+margin-left:0;
+margin-right:10px;
+font-size:15px;
+color: #444;
+}
+
+/*Social sharing*/
+.social-sharing {
+float:left;
+width:100%;
+}
+
+.social-sharing p{
+display:inline;
+}
+
+.social-sharing .fb-like{
+margin-bottom:0 !important;
+margin-right: 20px !important;
+}
+
+.social-sharing #twitter-widget-0{
+margin-bottom:0 !important;
+margin-right: 20px !important;
+}
+
+#___plusone_0 {
+width:auto  !important;
+}
+
