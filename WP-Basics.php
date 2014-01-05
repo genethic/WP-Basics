@@ -89,11 +89,20 @@ if ( $smof_data['social_sharing_active'] == 1 ) {
 //add stylesheet
 function wb_add_style() {
 	
-	wp_register_style('wb-basics-style',  plugin_dir_url( __FILE__ ) . 'wb-basics-style.php');
+	wp_register_style('wb-basics-style',  plugin_dir_url( __FILE__ ) . 'wb-basics-style.css');
 	wp_enqueue_style('wb-basics-style');
 	
 }
 
 add_action('wp_print_styles', 'wb_add_style');
 
+
+//add jquery
+function wb_add_jquery() {
+
+	wp_enqueue_script("jquery");
+	
+}
+
+add_action('wp_enqueue_scripts', 'wb_add_jquery');
 ?>
