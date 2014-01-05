@@ -44,180 +44,6 @@ if ( !function_exists('of_options') ) {
 			"tall" => "Tall",
 		);
 		
-		$breadcrumbs_css = '/*Breadcrumbs*/
-.breadcrumbs {
-float:left;
-width:100%;
-margin-bottom:30px;
-}
-
-.breadcrumbs a{
-color:#1abc9c;
-font-size:16px:
-}
-
-.breadcrumbs a:hover{
-text-decoration:underline;
-}';
-		
-		$pagination_css = '/*Pagination*/
-.post-links {
-float:left;
-width:100%;
-margin-top:20px;
-padding:20px 0;
-border-bottom:1px solid #eee;
-border-top:1px solid #eee;
-box-sizing:border-box;
-}
-
-.post-links a{
-color:#1abc9c;
-font-size: 18px;
-font-weight: 600;
-}
-
-.post-links a:hover{
-text-decoration:underline;
-}
-
-.post-links .previous{
-float:left;
-width:50%;
-}
-
-.post-links .next{
-float:right;
-width:50%;
-text-align:right;
-}';
-							
-		$related_content_css = '/*related content*/
-.related-post-wrapper {
-float:left;
-margin:3% 0;
-width:100%;
-box-sizing:border-box;
-}
-.related-post-wrapper > h3 {
-border-bottom:1px solid #111;
-float:left;
-margin-bottom:1%;
-width:100%;
-}
-.related-post {
-float:left;
-margin-left:4%;
-width:22%;
-position:relative;
-}
-.related-post:nth-of-type(4n+1) {
-clear:left;
-margin-left:0;
-}
-.related-post h3 {
-width:100%;
-float:left;
-margin-top:5px;
-}
-.related-post h3 a {
-color:#222;
-font-size:14px;
-line-height:20px;
-overflow:hidden;
-float:left;
-width:100%;
-margin-top:5px;
-}
-.related-post h3 a:hover {
-
-}
-
-.related-post-thumbnail {
-float:left;
-position:relative;
-width:100%;
-}
-
-.related-post-thumbnail img {
-width:100% !important;
-}';
-							
-		$author_info_css = '/*author*/
-.author-info {
-margin:3% 0;
-float:left;
-width:100%;
-}
-.author-info h2 {
-line-height:18px;
-margin:0 0 2% 0;
-}
-.author-info-avatar {
-float:left;
-width:20%;
-}
-.author-info-avatar img {
-height:80%;
-width:100% !important;
-}
-.author-info-desc {
-float:right;
-padding-left:3%;
-width:80%;
-box-sizing:border-box;
-}
-.author-info-links {
-float:right;
-margin-top:10px;
-width:auto;
-}
-
-.author-info-links a{
-font-size:14px;
-}
-
-.author-info-links:hover {
-text-decoration:underline;
-}
-.author-info .social-profile-buttons {
-float:left;
-margin-right:0;
-margin-top:10px;
-margin-bottom: 0;
-width:auto;
-}
-.author-info .social-profile-buttons a {
-margin-left:0;
-margin-right:10px;
-font-size:15px;
-color: #444;
-}';
-		
-		$social_sharing_css = '/*Social sharing*/
-.social-sharing {
-float:left;
-width:100%;
-}
-
-.social-sharing p{
-display:inline;
-}
-
-.social-sharing .fb-like{
-margin-bottom:0 !important;
-margin-right: 20px !important;
-}
-
-.social-sharing #twitter-widget-0{
-margin-bottom:0 !important;
-margin-right: 20px !important;
-}
-
-#___plusone_0 {
-width:auto  !important;
-}';
-
 
 		//Stylesheets Reader
 		$alt_stylesheet_path = LAYOUT_PATH;
@@ -370,12 +196,6 @@ $of_options[] = array( 	"name" 		=> "Delimiter",
 						"type" 		=> "text"
 				);
 				
-$of_options[] = array( 	"name" 		=> "Custom CSS",
-						"id" 		=> "breadcrumbs_css",
-						"std" 		=> $breadcrumbs_css,
-						"type" 		=> "textarea"
-				);
-				
 $of_options[] = array( 	"name" 		=> "Pagination",
 						"type" 		=> "heading",
 						"icon"		=> ADMIN_IMAGES . "icon-docs.png"
@@ -420,12 +240,6 @@ $of_options[] = array( 	"name" 		=> "In cat",
 						"id" 		=> "links_cat",
 						"std" 		=> 1,
 						"type" 		=> "checkbox"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Custom CSS",
-						"id" 		=> "pagination_css",
-						"std" 		=> $pagination_css,
-						"type" 		=> "textarea"
 				);
 				
 $of_options[] = array(	"id"        => "pagination_info",
@@ -473,12 +287,6 @@ $of_options[] = array( 	"name" 		=> "Display image",
 						"type" 		=> "checkbox"
 				);
 				
-$of_options[] = array( 	"name" 		=> "Custom CSS",
-						"id" 		=> "related_content_css",
-						"std" 		=> $related_content_css,
-						"type" 		=> "textarea"
-				);
-				
 $of_options[] = array(	"id"        => "related_content_info",
                         "std"       => "You can add related content anywhere on your post by calling function directly. Put the next code in the template you want: </br> if ( function_exists( wb_related_content() ) ) { wb_related_content(); } ",
                         "icon"      => true,
@@ -508,12 +316,6 @@ $of_options[] = array( 	"name" 		=> "Title",
 						"id" 		=> "author_title",
 						"std" 		=> "About %s",
 						"type" 		=> "text"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Custom CSS",
-						"id" 		=> "author_info_css",
-						"std" 		=> $author_info_css,
-						"type" 		=> "textarea"
 				);
 				
 $of_options[] = array(	"id"        => "author_info",
@@ -568,12 +370,6 @@ $of_options[] = array( 	"name"		=>"Google plus",
 						"std" 		=> "standard",
 						"type" 		=> "select",
 						"options"	=> $of_options_google_plus_size,
-				);
-				
-$of_options[] = array( 	"name" 		=> "Custom CSS",
-						"id" 		=> "social_sharing_css",
-						"std" 		=> $social_sharing_css,
-						"type" 		=> "textarea"
 				);
 				
 $of_options[] = array(	"id"        => "social_sharing_info",
