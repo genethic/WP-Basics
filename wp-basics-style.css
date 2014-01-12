@@ -1,4 +1,4 @@
-/*Breadcrumbs*/
+/* == BREADCRUMBS == */
 .breadcrumbs {
 float:left;
 width:100%;
@@ -14,7 +14,30 @@ font-size:16px:
 text-decoration:underline;
 }
 
-/*Pagination*/
+/* == PAGINATION == */
+.page_nav {
+float:left;
+width:100%;
+}
+
+.page_nav .page-numbers {
+border:1px solid #1abc9c;
+color:#1abc9c;
+font-size:16px;
+padding:5px 10px;
+}
+
+.page_nav .page-numbers:hover {
+background:#1abc9c;
+color:#fff;	
+}
+
+.page_nav .current {
+background:#1abc9c;
+color:#fff;	
+}
+
+/* == POST PAGINATION == */
 .post-links {
 float:left;
 width:100%;
@@ -46,7 +69,7 @@ width:50%;
 text-align:right;
 }
 
-/*related content*/
+/* == RELATED CONTENT == */
 .related-post-wrapper {
 float:left;
 margin:3% 0;
@@ -83,9 +106,6 @@ float:left;
 width:100%;
 margin-top:5px;
 }
-.related-post h3 a:hover {
-
-}
 
 .related-post-thumbnail {
 float:left;
@@ -97,7 +117,7 @@ width:100%;
 width:100% !important;
 }
 
-/*author*/
+/* == AUTHOR INFO == */
 .author-info {
 margin:3% 0;
 float:left;
@@ -148,7 +168,7 @@ font-size:15px;
 color: #444;
 }
 
-/*Social sharing*/
+/* == SOCIAL SHARING == */
 .social-sharing {
 float:left;
 width:100%;

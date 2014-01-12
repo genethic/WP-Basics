@@ -114,10 +114,38 @@ $of_options[] = array( 	"name" 		=> "Breadcrumbs",
 				);
 				
 $of_options[] = array(	"id"        => "breadcrumbs_info",
-                        "std"       => "You can add breadcrumbs anywhere on your blog by calling function directly. Put the next code in the template you want: </br> if ( function_exists( wb_breadcrmbs() ) ) { wb_breadcrumbs(); } ",
+                        "std"       => "You can add breadcrumbs anywhere on your blog by calling function directly. Put the next code in the template you want: </br> if ( function_exists( 'wb_breadcrumbs' ) ) { echo wb_breadcrumbs(); }",
                         "icon"      => true,
                         "type"      => "info"
                 );
+				
+$of_options[] = array( 	"name" 		=> "Show current",
+						"desc" 		=> "Display current post/page/category title in breadcrumbs",
+						"id" 		=> "show_current",
+						"std" 		=> 1,
+						"type" 		=> "checkbox"
+				);
+
+$of_options[] = array( 	"name" 		=> "Show home link",
+						"desc" 		=> "Show the link to the home page.",
+						"id" 		=> "show_home_link",
+						"std" 		=> 1,
+						"type" 		=> "checkbox"
+				);
+				
+$of_options[] = array( 	"name" 		=> "Show title",
+						"desc" 		=> "Show the title attribute for links",
+						"id" 		=> "show_title",
+						"std" 		=> 1,
+						"type" 		=> "checkbox"
+				);
+				
+$of_options[] = array( 	"name" 		=> "Delimiter",
+						"desc" 		=> "Delimiter between crumbs",
+						"id" 		=> "delimiter",
+						"std" 		=> " &raquo; ",
+						"type" 		=> "text"
+				);
 				
 $of_options[] = array( 	"name" 		=> "Home page text",
 						"desc" 		=> "Text for home page link.",
@@ -161,47 +189,38 @@ $of_options[] = array( 	"name" 		=> "Error page text",
 						"type" 		=> "text"
 				);
 				
-$of_options[] = array( 	"name" 		=> "Show current",
-						"desc" 		=> "Display current post/page/category title in breadcrumbs",
-						"id" 		=> "show_current",
-						"std" 		=> 1,
-						"type" 		=> "checkbox"
+$of_options[] = array( 	"name" 		=> "Pagination",
+						"type" 		=> "heading",
+						"icon"		=> ADMIN_IMAGES . "icon-add.png"
 				);
 				
-$of_options[] = array( 	"name" 		=> "Show on home",
-						"desc" 		=> "Show breadcrumbs on the homepage",
-						"id" 		=> "show_on_home",
-						"std" 		=> 1,
-						"type" 		=> "checkbox"
-				);
-
-$of_options[] = array( 	"name" 		=> "Show home link",
-						"desc" 		=> "Show the link to the home page.",
-						"id" 		=> "show_home_link",
-						"std" 		=> 1,
-						"type" 		=> "checkbox"
-				);
+$of_options[] = array(	"id"        => "pagination_info",
+                        "std"       => "You can add pagination anywhere on your post by calling function directly. Put the next code in the template you want: </br> if ( function_exists( 'wb_pagination' ) ) { echo wb_pagination(); }",
+                        "icon"      => true,
+                        "type"      => "info"
+                );
 				
-$of_options[] = array( 	"name" 		=> "Show title",
-						"desc" 		=> "Show the title attribute for links",
-						"id" 		=> "show_title",
-						"std" 		=> 1,
-						"type" 		=> "checkbox"
-				);
-				
-$of_options[] = array( 	"name" 		=> "Delimiter",
-						"desc" 		=> "Delimiter between crumbs",
-						"id" 		=> "delimiter",
-						"std" 		=> " &raquo; ",
+$of_options[] = array( 	"name" 		=> "Previous link",
+						"desc" 		=> "You must use %link to locate the link in the sentence.",
+						"id" 		=> "pag_prev_link",
+						"std" 		=> "&laquo; Prev",
 						"type" 		=> "text"
 				);
 				
-$of_options[] = array( 	"name" 		=> "Pagination",
+$of_options[] = array( 	"name" 		=> "Next link",
+						"desc" 		=> "You must use %link to locate the link in the sentence.",
+						"id" 		=> "pag_next_link",
+						"std" 		=> "Next &raquo;",
+						"type" 		=> "text"
+				);
+				
+$of_options[] = array( 	"name" 		=> "Post pagination",
 						"type" 		=> "heading",
-						"icon"		=> ADMIN_IMAGES . "icon-docs.png"
+						"icon"		=> ADMIN_IMAGES . "icon-add.png"
 				);
 				
 $of_options[] = array( 	"name" 		=> "Activate pagination",
+						"desc" 		=> "If you activate this option, will show post pagination after posts content.",
 						"id" 		=> "pagination_active",
 						"std" 		=> 1,
 						"type" 		=> "switch"
@@ -243,7 +262,7 @@ $of_options[] = array( 	"name" 		=> "In cat",
 				);
 				
 $of_options[] = array(	"id"        => "pagination_info",
-                        "std"       => "You can add pagination anywhere on your post by calling function directly. Put the next code in the template you want: </br> if ( function_exists( wb_pagination() ) ) { wb_pagination(); } ",
+                        "std"       => "You can add pagination anywhere on your post by calling function directly. Put the next code in the template you want: </br> if ( function_exists( 'wb_post_pagination' ) ) { echo wb_post_pagination(); }",
                         "icon"      => true,
                         "type"      => "info"
                 );
@@ -254,6 +273,7 @@ $of_options[] = array( 	"name" 		=> "Related content",
 				);
 				
 $of_options[] = array( 	"name" 		=> "Activate related content",
+						"desc" 		=> "If you activate this option, will show related content after posts content.",
 						"id" 		=> "related_active",
 						"std" 		=> 1,
 						"type" 		=> "switch"
@@ -288,17 +308,18 @@ $of_options[] = array( 	"name" 		=> "Display image",
 				);
 				
 $of_options[] = array(	"id"        => "related_content_info",
-                        "std"       => "You can add related content anywhere on your post by calling function directly. Put the next code in the template you want: </br> if ( function_exists( wb_related_content() ) ) { wb_related_content(); } ",
+                        "std"       => "You can add related content anywhere on your post by calling function directly. Put the next code in the template you want: </br> if ( function_exists( 'wb_related_content' ) ) { echo wb_related_content(); }",
                         "icon"      => true,
                         "type"      => "info"
                 );
 				
 $of_options[] = array( 	"name" 		=> "Author info",
 						"type" 		=> "heading",
-						"icon"		=> ADMIN_IMAGES . "icon-docs.png"
+						"icon"		=> ADMIN_IMAGES . "icon-add.png"
 				);
 				
 $of_options[] = array( 	"name" 		=> "Activate author info",
+						"desc" 		=> "If you activate this option, will show author info after posts content.",
 						"id" 		=> "author_active",
 						"std" 		=> 1,
 						"type" 		=> "switch"
@@ -319,17 +340,18 @@ $of_options[] = array( 	"name" 		=> "Title",
 				);
 				
 $of_options[] = array(	"id"        => "author_info",
-                        "std"       => "You can add author info anywhere on your post by calling function directly. Put the next code in the template you want: </br> if ( function_exists( wb_author_info() ) ) { wb_author_info(); } ",
+                        "std"       => "You can add author info anywhere on your post by calling function directly. Put the next code in the template you want: </br>  if ( function_exists( 'wb_author_info' ) ) { echo wb_author_info(); } ",
                         "icon"      => true,
                         "type"      => "info"
                 );
 				
 $of_options[] = array( 	"name" 		=> "Social sharing",
 						"type" 		=> "heading",
-						"icon"		=> ADMIN_IMAGES . "icon-docs.png"
+						"icon"		=> ADMIN_IMAGES . "icon-add.png"
 				);
 				
 $of_options[] = array( 	"name" 		=> "Activate social sharing",
+						"desc" 		=> "If you activate this option, will show social sharing after posts content.",
 						"id" 		=> "social_sharing_active",
 						"std" 		=> 1,
 						"type" 		=> "switch"
@@ -373,7 +395,7 @@ $of_options[] = array( 	"name"		=>"Google plus",
 				);
 				
 $of_options[] = array(	"id"        => "social_sharing_info",
-                        "std"       => "You can add social sharing buttons anywhere on your blog by calling function directly. Put the next code in the template you want: </br> if ( function_exists( wb_social_sharing() ) ) { wb_social_sharing(); } ",
+                        "std"       => "You can add social sharing buttons anywhere on your blog by calling function directly. Put the next code in the template you want: </br> if ( function_exists( 'wb_social_sharing' ) ) { echo wb_social_sharing(); }",
                         "icon"      => true,
                         "type"      => "info"
                 );

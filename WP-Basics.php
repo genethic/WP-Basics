@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP-Basics
 Description: Add basic funtionalities to your wordpress: breadcrumbs, pagination, related content, author info after posts content and social sharing after posts content
-Version:1.0
+Version:1.7
 Author: Genethick
 Author URI: http://www.codetocode-developments.com
 Plugin URI: http://www.codetocode-developments.com/wp-plugins/wp-basics-documentation/
@@ -14,6 +14,7 @@ global $smof_data;
 
 include ('breadcrumbs.php');
 include ('pagination.php');
+include ('post-pagination.php');
 include ('related.php');
 include ('author.php');
 include ('social-profiles.php');
@@ -29,7 +30,7 @@ if ( $smof_data['pagination_active'] == 1 ) {
 	
 	function add_wb_pagination ($content) {
 		
-		$content .= wb_pagination();
+		$content .= wb_post_pagination();
 		return $content;
 		
 	}

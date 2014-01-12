@@ -18,7 +18,7 @@ function wb_breadcrumbs() {
 	
     $show_current   = $smof_data['show_current']; // 1 - show current post/page/category title in breadcrumbs, 0 - don't show  
 
-    $show_on_home   = $smof_data['show_on_home']; // 1 - show breadcrumbs on the homepage, 0 - don't show  
+    $show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show  
 
     $show_home_link = $smof_data['show_home_link']; // 1 - show the 'Home' link, 0 - don't show  
 
