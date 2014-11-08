@@ -4,7 +4,11 @@ Donate link: http://www.codetocode-developments.com/wp-plugins/wp-basics-documen
 Tags: breadcrumbs, pagination, related content, author info, author biography, social sharing, social networks, like button
 Requires at least: 3.0
 Tested up to: 3.8
+<<<<<<< HEAD
 Stable tag: 1.7
+=======
+Stable tag: 2.0
+>>>>>>> 610ace1b528426b945b804231d6233642ecbf584
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +60,13 @@ you can continue setting it through the options panel.
 6. Social sharing options.
 
 == Changelog ==
+<<<<<<< HEAD
+=======
+= 2.0 =
+*Migration to Redux Framework
+*Code improvments
+
+>>>>>>> 610ace1b528426b945b804231d6233642ecbf584
 = 1.7 =
 *Improved options
 
